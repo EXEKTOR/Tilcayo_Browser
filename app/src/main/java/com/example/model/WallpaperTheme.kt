@@ -58,6 +58,22 @@ object WallpaperPresets {
             previewColors = listOf(Color(0xFFFFFBEB), Color(0xFFFEF3C7), Color(0xFFFDE68A)),
             accentColor = Color(0xFFD97706),
             isLight = true
+        ),
+        AnimatedPreset(
+            id = "anim_morning_dew",
+            name = "Утренняя роса",
+            description = "Зацикленные мягкие аквамариновые круги и хрустальные блики",
+            previewColors = listOf(Color(0xFFF0FDF4), Color(0xFFE0F2FE), Color(0xFFBAE6FD)),
+            accentColor = Color(0xFF0284C7),
+            isLight = true
+        ),
+        AnimatedPreset(
+            id = "anim_sun_dust",
+            name = "Солнечные лучи и пыльца",
+            description = "Парящие золотистые световые частицы на мягком градиенте",
+            previewColors = listOf(Color(0xFFFFFDF5), Color(0xFFFEF3C7), Color(0xFFFDE68A)),
+            accentColor = Color(0xFFE58A2B),
+            isLight = true
         )
     )
 
@@ -118,6 +134,28 @@ object WallpaperPresets {
             accentColor = Color(0xFFBE123C),
             isLight = true
         ),
+        GradientPreset(
+            id = "preset_lavender_haze",
+            name = "Лавандовая дымка",
+            colors = listOf(
+                Color(0xFFFAF5FF),
+                Color(0xFFF3E8FF),
+                Color(0xFFE9D5FF)
+            ),
+            accentColor = Color(0xFF9333EA),
+            isLight = true
+        ),
+        GradientPreset(
+            id = "preset_sand_dune",
+            name = "Золотистая дюна",
+            colors = listOf(
+                Color(0xFFFFFBEB),
+                Color(0xFFF7EEDD),
+                Color(0xFFEADBCE)
+            ),
+            accentColor = Color(0xFFD97706),
+            isLight = true
+        ),
 
         // Dark Presets
         GradientPreset(
@@ -173,6 +211,28 @@ object WallpaperPresets {
                 Color(0xFF0F1015)
             ),
             accentColor = Color(0xFFD1D5DB),
+            isLight = false
+        ),
+        GradientPreset(
+            id = "preset_amethyst_night",
+            name = "Аметистовая полночь",
+            colors = listOf(
+                Color(0xFF241433),
+                Color(0xFF13091B),
+                Color(0xFF1F102B)
+            ),
+            accentColor = Color(0xFFA855F7),
+            isLight = false
+        ),
+        GradientPreset(
+            id = "preset_deep_slate",
+            name = "Глубокий кибер-сланец",
+            colors = listOf(
+                Color(0xFF0F172A),
+                Color(0xFF1E293B),
+                Color(0xFF0B1120)
+            ),
+            accentColor = Color(0xFF38BDF8),
             isLight = false
         )
     )
