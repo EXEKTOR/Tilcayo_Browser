@@ -89,6 +89,7 @@ import com.example.model.ThemeMode
 import com.example.model.TilcayoModel
 import com.example.model.UserWallpaperState
 import com.example.model.WallpaperPresets
+import com.example.ui.components.AboutLicenseSheet
 import com.example.ui.components.AnimatedWallpaperView
 import com.example.ui.components.BrowserWebView
 import com.example.ui.components.PluginStoreSheet
@@ -180,6 +181,7 @@ fun TilcayoBrowserApp(
     var showSmartTilcayo by remember { mutableStateOf(false) }
     var showTilcayoLens by remember { mutableStateOf(false) }
     var showThemeCustomizer by remember { mutableStateOf(false) }
+    var showAboutLicense by remember { mutableStateOf(false) }
     var initialAiPrompt by remember { mutableStateOf("") }
 
     // Smooth Material 3 blur animation for transitions
@@ -427,6 +429,7 @@ fun TilcayoBrowserApp(
                                 },
                                 onOpenPluginStore = { showPluginStore = true },
                                 onOpenThemeCustomizer = { showThemeCustomizer = true },
+                                onOpenLicense = { showAboutLicense = true },
                                 onVoiceClick = { startVoiceSearch() },
                                 onOpenUrl = { url ->
                                     browserRepo.updateActiveTab { it.copy(url = url, title = url, isLoading = true, progress = 15) }
@@ -557,6 +560,11 @@ fun TilcayoBrowserApp(
             onResetDefault = { themeRepo.resetToDefault() },
             onDismiss = { showThemeCustomizer = false }
         )
+    }
+
+    // ABOUT & OPEN SOURCE LICENSE SHEET
+    if (showAboutLicense) {
+        AboutLicenseSheet(onDismiss = { showAboutLicense = false })
     }
 
     // SMART TILCAYO FULL-SCREEN AI DIALOG (Smooth Material 3 animated transition with blur)

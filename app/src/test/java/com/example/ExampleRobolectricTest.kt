@@ -144,5 +144,13 @@ class ExampleRobolectricTest {
     assertTrue(blocks.any { it is com.example.ui.components.MarkdownBlock.Blockquote })
     assertTrue(blocks.any { it is com.example.ui.components.MarkdownBlock.Bullet })
   }
+
+  @Test
+  fun `verify mit license content`() {
+    val licenseText = com.example.ui.components.TILCAYO_MIT_LICENSE_TEXT
+    assertTrue(licenseText.startsWith("MIT License"))
+    assertTrue(licenseText.contains("Tilcayo Browser Contributors"))
+    assertTrue(licenseText.contains("Permission is hereby granted, free of charge"))
+  }
 }
 

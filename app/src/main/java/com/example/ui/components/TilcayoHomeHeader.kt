@@ -29,6 +29,7 @@ import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -74,6 +75,7 @@ fun TilcayoHomeHeader(
     onOpenLens: () -> Unit,
     onOpenPluginStore: () -> Unit,
     onOpenThemeCustomizer: () -> Unit,
+    onOpenLicense: () -> Unit = {},
     onVoiceClick: () -> Unit,
     onOpenUrl: (String) -> Unit,
     bookmarks: List<Bookmark>,
@@ -106,7 +108,7 @@ fun TilcayoHomeHeader(
             .padding(horizontal = 18.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Top action bar with Quick Theme Switcher and Theme Customizer
+        // Top action bar with License, Quick Theme Switcher and Theme Customizer
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -114,6 +116,29 @@ fun TilcayoHomeHeader(
             horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // License & About Button
+            Surface(
+                onClick = onOpenLicense,
+                shape = CircleShape,
+                color = topBtnBg,
+                border = androidx.compose.foundation.BorderStroke(1.dp, topBtnBorder),
+                shadowElevation = 3.dp,
+                modifier = Modifier
+                    .size(40.dp)
+                    .testTag("home_license_btn")
+            ) {
+                Box(contentAlignment = Alignment.Center) {
+                    Icon(
+                        imageVector = Icons.Default.VerifiedUser,
+                        contentDescription = "Лицензия и о программе",
+                        tint = TilcayoGold,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.width(10.dp))
+
             // Quick Theme Switcher (Sun/Moon button)
             Surface(
                 onClick = onToggleTheme,
