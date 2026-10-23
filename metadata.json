@@ -1,0 +1,6 @@
+{
+  "name": "Тилкайо браузер",
+  "description": "Android браузер с поддержкой плагинов, магазином расширений и ИИ-режимом 'Умный тилкайо'",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,6 @@
+{
+  "summary":  "План реализации: улучшенная типографика и Markdown в ИИ-режиме, кнопка веб-поиска Google, исправление отображения выбранной модели (3.5/3.8), голосовая озвучка через Google Text-to-Speech и защита от падения Chromium WebView (Renderer process crash).",
+  "updatedAt":  "2026-10-23T12:56:22.522741383Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}

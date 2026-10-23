@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "Plugin": {
+      "collection": "plugins",
+      "fields": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "author": { "type": "string" },
+        "authorId": { "type": "string" },
+        "version": { "type": "string" },
+        "iconName": { "type": "string" },
+        "category": { "type": "string" },
+        "jsCode": { "type": "string" },
+        "cssCode": { "type": "string" },
+        "matchUrlRegex": { "type": "string" },
+        "downloads": { "type": "number" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "UserPlugin": {
+      "collection": "users/{userId}/installedPlugins",
+      "fields": {
+        "userId": { "type": "string" },
+        "pluginId": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "isEnabled": { "type": "boolean" },
+        "jsCode": { "type": "string" },
+        "cssCode": { "type": "string" },
+        "matchUrlRegex": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "Bookmark": {
+      "collection": "users/{userId}/bookmarks",
+      "fields": {
+        "userId": { "type": "string" },
+        "url": { "type": "string" },
+        "title": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    }
+  }
+}
